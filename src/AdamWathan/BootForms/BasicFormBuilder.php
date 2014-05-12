@@ -202,4 +202,37 @@ class BasicFormBuilder
 	{
 		return call_user_func_array(array($this->builder, $method), $parameters);
 	}
+
+
+
+
+	protected function textWithPlaceholder($label, $name, $value = null, $placeholder = null)
+	{
+		$control = $this->builder->text($name)->value($value);
+		if (isset($placeholder)) $control->placeholder($placeholder);
+
+		return $this->formGroup($label, $name, $control);	
+	}
+
+	public function homePhone($label, $name, $value = null)
+	{
+		return $this->textWithPlaceholder($label, $name, $value, 'E.g. (02)98553958');
+	}
+
+	public function mobile($label, $name, $value = null)
+	{
+		return $this->textWithPlaceholder($label, $name, $value, 'E.g. 0454309486');
+	}
+
+	public function gender($label, $name)
+	{
+
+	}
+
+	public function datePicker($label, $name, $value = null)
+	{
+		$control = $this->builder->datePicker($name)->value($value);	
+		return $this->formGroup($label, $name, $control);
+	}
+
 }

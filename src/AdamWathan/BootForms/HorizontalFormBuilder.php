@@ -58,7 +58,7 @@ class HorizontalFormBuilder extends BasicFormBuilder
 
 	protected function getLabelClass()
 	{
-		return 'col-lg-' . $this->labelWidth;
+		return 'col-sm-' . $this->labelWidth;
 	}
 
 	public function submit($value = "Submit", $type = "btn-default")

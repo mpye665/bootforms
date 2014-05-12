@@ -37,7 +37,7 @@ class HorizontalFormGroup extends FormGroup
 
 	protected function getControlClass()
 	{
-		return 'col-lg-' . $this->controlWidth;
+		return 'col-sm-' . $this->controlWidth;
 	}
 
 	public function __call($method, $parameters)

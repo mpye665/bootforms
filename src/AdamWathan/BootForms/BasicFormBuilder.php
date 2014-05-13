@@ -18,7 +18,10 @@ class BasicFormBuilder
 
 	protected function formGroup($label, $name, $control)
 	{
-		$label = $this->builder->label($label, $name)->addClass('control-label')->forId($name);
+		if ( ! is_null($label))
+		{
+			$label = $this->builder->label($label, $name)->addClass('control-label')->forId($name);
+		}
 		$control->id($name)->addClass('form-control');
 
 		$formGroup = new FormGroup($label, $control);

@@ -38,7 +38,7 @@ class OffsetFormGroup extends Element
 	protected function getControlClass()
 	{
 		$offset = 12 - $this->controlWidth;
-		return 'col-lg-offset-' . $offset . ' col-lg-' . $this->controlWidth;
+		return 'col-sm-offset-' . $offset . ' col-sm-' . $this->controlWidth;
 	}
 
 	public function __call($method, $parameters)
